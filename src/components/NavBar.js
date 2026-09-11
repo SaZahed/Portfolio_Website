@@ -1,13 +1,16 @@
 
 import {useState, useEffect} from "react";
-import {Navbar, Container,Nav} from "react-bootstrap"
+import {Navbar, Container,Nav} from "react-bootstrap" //nutzen grundgerüst von bootstrap
+
+//bilder importe, assets können dann über src einfach eingebunden werden
 import logo from"../assets/img/logo.svg";
 import navIcon1 from"../assets/img/nav-icon1.svg";
 import navIcon2 from"../assets/img/nav-icon2.svg";
 import navIcon3 from"../assets/img/nav-icon3.svg";
 
+//fertiged navbar einbinden
 export const NavBar = () => {
-    const [activeLink, setActiveLink] = useState("home");
+    const [activeLink, setActiveLink] = useState("home"); //speichert Wert der später verändert wird
     const [scrolled,seScrolled] = useState(false);
 
     useEffect(() =>{
@@ -19,9 +22,9 @@ export const NavBar = () => {
             }
         }
         window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll); //celan up, damit eventlistener nicht weiter läuft
 
-    },[])
+    },[]) //Führe diesen Effect beim Mounten der Komponente aus und nicht bei jedem normalen Re-Render erneut.
 
     const onUpdateActiveLink = (value) =>{
         setActiveLink(value);
