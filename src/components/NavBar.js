@@ -11,14 +11,14 @@ import navIcon3 from"../assets/img/nav-icon3.svg";
 //fertiged navbar einbinden
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState("home"); //speichert Wert der später verändert wird
-    const [scrolled,seScrolled] = useState(false);
+    const [scrolled,setScrolled] = useState(false);
 
     useEffect(() =>{
         const onScroll = () =>{
             if(window.scrollY > 50){
-                seScrolled(true);
+                setScrolled(true);
             }else{
-                seScrolled(false);
+                setScrolled(false);
             }
         }
         window.addEventListener("scroll", onScroll);
@@ -32,8 +32,9 @@ export const NavBar = () => {
     return (
         <Navbar expand="lg" className = {scrolled ? "scrolled": ""}>
             <Container>
-                <Navbar.Brand href="#home"></Navbar.Brand>
+                <Navbar.Brand href="#home">
                 <img src= {logo} alt="Logo"/>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon" ></span>
                 </Navbar.Toggle>
