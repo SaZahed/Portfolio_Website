@@ -1,4 +1,9 @@
 import meter1 from "../assets/img/meter1.svg";
+import java from "../assets/img/Java.png"
+import webDev from "../assets/img/webDev.avif";
+import python from "../assets/img/pyTransparent.jpg"
+import cSharp from "../assets/img/c#.png"
+
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
@@ -35,22 +40,22 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Hier muss ich mal schauen was ich noch hinzufüge. Im Studium lernt man vieles kennen, aber einzuschätzen wie gut man die Skills beherrscht kann schwer sein.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={webDev} alt="Image" /> {/* davor war hier meter1 */}
                                 <h5>Web Development</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <img src={cSharp} alt="Image" />
+                                <h5>C#</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={python} alt="Image" />{/*vorher meter 3*/ }
                                 <h5>Python</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={java} alt="Image" />
                                 <h5>Java</h5>
                             </div>
                         </Carousel>
