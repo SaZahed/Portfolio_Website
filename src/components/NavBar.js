@@ -4,11 +4,14 @@ import {Navbar, Container,Nav} from "react-bootstrap" //nutzen grundgerüst von 
 
 //bilder importe, assets können dann über src einfach eingebunden werden
 import logo from"../assets/img/logo.svg";
+import pengweng from"../assets/img/pengweng.jpg";
+import panda from"../assets/img/panda.png"; //selbst ausgewählt
+
 import navIcon1 from"../assets/img/nav-icon1.svg";
 import navIcon2 from"../assets/img/nav-icon2.svg";
 import navIcon3 from"../assets/img/nav-icon3.svg";
 
-//fertiged navbar einbinden
+//fertiges navbar einbinden
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState("home"); //speichert Wert der später verändert wird
     const [scrolled,setScrolled] = useState(false);
@@ -33,7 +36,7 @@ export const NavBar = () => {
         <Navbar expand="lg" className = {scrolled ? "scrolled": ""}>
             <Container>
                 <Navbar.Brand href="#home">
-                <img src= {logo} alt="Logo"/>
+                <img src= {panda} alt="Logo"/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon" ></span>
