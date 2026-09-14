@@ -1,5 +1,5 @@
 
-import {useState, useEffect} from "react";
+import {useState, useEffect} from "react"; //hooks von react: daten speichern und veraendern
 import {Navbar, Container,Nav} from "react-bootstrap" //nutzen grundgerüst von bootstrap
 
 //bilder importe, assets können dann über src einfach eingebunden werden
@@ -11,39 +11,40 @@ import navIcon1 from"../assets/img/nav-icon1.svg";
 import navIcon2 from"../assets/img/nav-icon2.svg";
 import navIcon3 from"../assets/img/nav-icon3.svg";
 
-//fertiges navbar einbinden
+//fertiges navbar einbinden: export wichtig damit wir es in App.js nutzen koennen
 export const NavBar = () => {
-    const [activeLink, setActiveLink] = useState("home"); //speichert Wert der später verändert wird
-    const [scrolled,setScrolled] = useState(false);
+    const [activeLink, setActiveLink] = useState("home"); //speichert Wert der später verändert wird: am anfang immer in home section
+    const [scrolled,setScrolled] = useState(false); //erst wenn user scrolled true
 
     useEffect(() =>{
-        const onScroll = () =>{
+        const onScroll = () =>{ //prueft wie viel pixel vertikal nach unten gescrolled wurde
             if(window.scrollY > 50){
                 setScrolled(true);
             }else{
                 setScrolled(false);
             }
         }
-        window.addEventListener("scroll", onScroll);
+        window.addEventListener("scroll", onScroll);//wenn ein scroll event passiert Methode ausfuehren
         return () => window.removeEventListener("scroll", onScroll); //celan up, damit eventlistener nicht weiter läuft
 
-    },[]) //Führe diesen Effect beim Mounten der Komponente aus und nicht bei jedem normalen Re-Render erneut.
+    },[]) //Dependency Array: Führe diesen Effect beim Mounten der Komponente aus und nicht bei jedem normalen Re-Render erneut.
 
     const onUpdateActiveLink = (value) =>{
-        setActiveLink(value);
+        setActiveLink(value); //je nach dem in welcher Section value auf home, skill oder project
     }
+    //JSX
     return (
-        <Navbar expand="lg" className = {scrolled ? "scrolled": ""}>
+        <Navbar expand="lg" className = {scrolled ? "scrolled": ""}> //lg fuer aufklappen auf groeßeren Bildschirmen
             <Container>
                 <Navbar.Brand href="#home">
                 <img src= {panda} alt="Logo"/>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav">
+                <Navbar.Toggle aria-controls="basic-navbar-nav"> //Button, der auf kleinen Bildschirmen die Navbar auf- und zuklappt
                     <span className="navbar-toggler-icon" ></span>
                 </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home" className = {activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick ={() => onUpdateActiveLink("home")} >Home</Nav.Link>
+                <Navbar.Collapse id="basic-navbar-nav"> //Bereich, der auf kleinen Bildschirmen ein-/ausgeblendet wird
+                    <Nav className="me-auto"> //bootstrap klasse me auto
+                        <Nav.Link href="#home" className = {activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick ={() => onUpdateActiveLink("home")} >Home</Nav.Link> //className fuer styleing anpassen
                         <Nav.Link href="#skills" className = {activeLink === "skills" ? "active navbar-link" : "navbar-link"} onClick ={() => onUpdateActiveLink("skills")}>Skills</Nav.Link>
                         <Nav.Link href="#projects" className = {activeLink === "projects" ? "active navbar-link" : "navbar-link"} onClick ={() => onUpdateActiveLink("projects")}>Projects</Nav.Link>
                     </Nav>

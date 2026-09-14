@@ -1,6 +1,6 @@
 /************ Custom Font ************/
 @font-face {
-	font-family: Centra;
+	font-family: Centra;/*eigene Schriftdatei, die unter dem Namen Centra verwendet wird*/
 	src: url('./assets/font/CentraNo2-Bold.ttf');
 	font-weight: 700;
 }
@@ -17,21 +17,23 @@
 
 /************ Default Css ************/
 * {
+  /*Seitenabstaende entfernen*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*weicher sprung*/
   scroll-padding-top: 75px;
 }
 
+/*Grundstyling der website*/
 body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-color: #121212 !important; /*important = Vorrang vor anderen CSS Regeln*/
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -42,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
 }
 
+/*css reset fuer gestaltung*/
 p, a, li, button, ul {
   margin: 0;
   padding: 0;
@@ -54,7 +57,7 @@ a:hover {
 }
 
 img {
-  width: 100%;
+  width: 100%; /*max. verfuegbare Breite ausfuellen*/
   height: auto;
 }
 
@@ -67,6 +70,7 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
+/*Website auf verschiedene Bildschrim anpassen = responsive Design*/
 @media (min-width:1700px) {
 	main .container {
 		max-width: 100%;
@@ -282,9 +286,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
+/*Animation definieren*/
 .banner img {
   animation: updown 3s linear infinite;
 }
+/*bounce effect*/
 @keyframes updown {
     0% {
         transform: translateY(-20px);
