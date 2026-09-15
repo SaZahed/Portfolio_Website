@@ -34,7 +34,7 @@ export const NavBar = () => {
     }
     //JSX
     return (
-        <Navbar expand="lg" className = {scrolled ? "scrolled": ""}> //lg fuer aufklappen auf groeßeren Bildschirmen
+        <Navbar expand="lg" className = {scrolled ? "scrolled": ""}>
             <Container>
                 <Navbar.Brand href="#home">
                 <img src= {panda} alt="Logo"/>
@@ -42,9 +42,11 @@ export const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav"> //Button, der auf kleinen Bildschirmen die Navbar auf- und zuklappt
                     <span className="navbar-toggler-icon" ></span>
                 </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav"> //Bereich, der auf kleinen Bildschirmen ein-/ausgeblendet wird
-                    <Nav className="me-auto"> //bootstrap klasse me auto
-                        <Nav.Link href="#home" className = {activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick ={() => onUpdateActiveLink("home")} >Home</Nav.Link> //className fuer styleing anpassen
+                {/*Bereich, der auf kleinen Bildschirmen ein-/ausgeblendet wird*/}
+                <Navbar.Collapse id="basic-navbar-nav"> 
+                    <Nav className="me-auto"> 
+                        {/*className fuer styleing anpassen*/}
+                        <Nav.Link href="#home" className = {activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick ={() => onUpdateActiveLink("home")} >Home</Nav.Link> 
                         <Nav.Link href="#skills" className = {activeLink === "skills" ? "active navbar-link" : "navbar-link"} onClick ={() => onUpdateActiveLink("skills")}>Skills</Nav.Link>
                         <Nav.Link href="#projects" className = {activeLink === "projects" ? "active navbar-link" : "navbar-link"} onClick ={() => onUpdateActiveLink("projects")}>Projects</Nav.Link>
                     </Nav>
