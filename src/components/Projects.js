@@ -1,14 +1,14 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "./ProjectCard"; //react muster mit cards zu arbeiten: so vermeidet man doppelte HTML codestuecke
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 //import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import TrackVisibility from 'react-on-screen'; // neue externe react komponente: element gerade sichtbar oder nicht?
 
 export const Projects = () => {
-
+  //array mit mehreren Objekten, um Projekte zu visualisieren
   const projects = [
     {
       title: "Business Startup",
@@ -52,7 +52,7 @@ export const Projects = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                <Tab.Container id="projects-tabs" defaultActiveKey="first"> //bauen Tab wobei der erste immer aktiv ist
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Tab 1</Nav.Link>
@@ -68,7 +68,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          projects.map((project, index) => { //durchlauf der Projekte
                             return (
                               <ProjectCard
                                 key={index}

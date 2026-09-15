@@ -1,36 +1,44 @@
 import { useEffect, useState } from "react"; //animation
 import { Container, Row, Col} from "react-bootstrap"
-import {ArrowRightCircle} from "react-bootstrap-icons"
+import {ArrowRightCircle} from "react-bootstrap-icons" //arrow icons aus libary nutzen
 import headerIMG from "../assets/img/header-img.svg"
 
 export const Banner = () =>{
-    const [loopNum, setLoopNum] = useState(0); //first word as default
-    const [isDeleting,setIsDeleting] = useState(false); 
+    //animation bestandteile
+    const [loopNum, setLoopNum] = useState(0); //first word as default: wo im array bin ich?
+    const [isDeleting,setIsDeleting] = useState(false); //schreibe oder loesche ich im moment?
     const toRotate = ["Web Developer", "Programmer", "Student"]; //words to rotate
-    const [text, setText] = useState(""); // letter for letter
-    const period = 2000; //time when each letter is printed --> transition
+    const [text, setText] = useState(""); // aktuell sichtbarer text
+    const period = 2000; //transition: 2sekunden warten bevor es geloescht wird
     const [delta, setDelta] = useState(300 - Math.random() * 100); //how fast each will be printed
 
     useEffect(() =>{
-        //interval text update
+        //interval text update: Führe diese Funktion immer wieder nach diesem Zeitintervall aus.
         let ticker = setInterval(() =>{
         tick();
         },delta);
 
-        return() => {clearInterval(ticker)};
+        return() => {clearInterval(ticker)}; //clear damit man nicht mehrere timer hat
 
     }, [text])
 
     const tick = () =>{
         //just 3 elements so we want to go back to first again
-        let i = loopNum % toRotate.length;
+        /*toRotate ist 3
+         * loopNum sollte nie größer als 3 werden, weil es gar nicht so viele elemente gibt
+         * daher muss er zurück
+         *  z.B man ist bei index 2 --> 2%3 = 2 element im array wird gezeigt
+         * beim 3 durchlauf gibt es kein element mehr: 3 % 3 = 0 (also wird das erste wieder angezeigt)
+        */
+        let i = loopNum % toRotate.length; 
         let fullText = toRotate[i];
+        //wenn man am loeschen ist dann bitte buchstaben loeschen, ansonsten hinzufuegen
         let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0, text.length +1);
 
         setText(updatedText);
 
         if(isDeleting){
-            setDelta(prevDelta => prevDelta /2)
+            setDelta(prevDelta => prevDelta /2) //loeschvorgang verschnellern
         }
 
         if(!isDeleting && updatedText === fullText){
