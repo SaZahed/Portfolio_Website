@@ -11,35 +11,45 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Hello Kitty backing page",
+      description: "HTML, CSS, Node,js Anwendung",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "E-Shop",
+      description: "Eine E-Shop Anwendung in Java",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Reisesystem",
+      description: "SQL Datenbank",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Python Projekte",
+      description: "Einkaufsanwendung & Model für Filmanalyse",
       imgUrl: projImg3,
     },
+    {
+      title: "Schiffssimulator",
+      description: "Schiffssimulator mithilfe von Unity implementiert",
+      imgUrl: projImg1,
+    },
+    {
+      title: "Ticketshop",
+      description: "Angular Anwendung: Konzertticketshop",
+      imgUrl: projImg2,
+    },
+    {
+      title: "KI Bildanalyse im industriellen Kontext",
+      description: "Projekt mit OAS; KI für Bildanalyse",
+      imgUrl: projImg3,
+    },
+    {
+      title: "Medication Reminder System",
+      description: "Mithilfe von einem Arduino ein Erinnerungssystem für die Medikamenteneinnahme implementiert",
+      imgUrl: projImg3,
+    }
   ];
 
   return (
@@ -68,7 +78,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          projects.slice(0,6).map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -79,8 +89,20 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
+                    <Tab.Pane eventKey="second">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <Row>
+                      {
+                          projects.slice(6,8).map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                        </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
