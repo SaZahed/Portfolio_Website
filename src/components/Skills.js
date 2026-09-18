@@ -40,7 +40,7 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Hier muss ich mal schauen was ich noch hinzufüge. Im Studium lernt man vieles kennen, aber einzuschätzen wie gut man die Skills beherrscht kann schwer sein.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Sprachen, die wir im Studium gelernt haben:<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={webDev} alt="Image" /> {/* davor war hier meter1 */}
@@ -52,7 +52,7 @@ export const Skills = () => {
                             </div>
                             <div className="item">
                                 <img src={python} alt="Image" />{/*vorher meter 3*/ }
-                                <h5>Python</h5>
+                                <h5>Python</h5> {/*bild aendern*/}
                             </div>
                             <div className="item">
                                 <img src={java} alt="Image" />
