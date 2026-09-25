@@ -1,8 +1,13 @@
 import meter1 from "../assets/img/meter1.svg";
 import java from "../assets/img/Java.png"
 import webDev from "../assets/img/webDev.avif";
-import python from "../assets/img/pyTransparent.jpg"
+import py from "../assets/img/py.jpg"
+
+import bss from "../assets/img/bss.webp"
+
 import cSharp from "../assets/img/c#.png"
+
+import sql from "../assets/img/sql.avif"
 
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
@@ -51,12 +56,20 @@ export const Skills = () => {
                                 <h5>C#</h5>
                             </div>
                             <div className="item">
-                                <img src={python} alt="Image" />{/*vorher meter 3*/ }
+                                <img src={py} alt="Image" />{/*vorher meter 3*/ }
                                 <h5>Python</h5> {/*bild aendern*/}
                             </div>
                             <div className="item">
                                 <img src={java} alt="Image" />
                                 <h5>Java</h5>
+                            </div>
+                            <div className="item">
+                                <img src={sql} alt="Image" />
+                                <h5>SQL</h5>
+                            </div>
+                            <div className="item">
+                                <img src={bss} alt="Image" />
+                                <h5>Linux</h5>
                             </div>
                         </Carousel>
                     </div>

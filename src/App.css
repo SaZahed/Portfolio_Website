@@ -395,7 +395,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #fff;
+  color: #0e0e0e;
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -439,7 +439,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+
+  aspect-ratio: 16 / 9;
 }
+
+.proj-imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
