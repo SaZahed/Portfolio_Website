@@ -45,10 +45,10 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Sprachen, die wir im Studium gelernt haben:<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Kentnisse und Technologien:<br></br> Im Studium habe ich bereits mit verschiedenen Programmiersprachen und Technologien gearbeitet. Dabei konnte ich praktische Erfahrungen sammeln und mir Grundlagen in den folgenden Bereichen aneignen.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={webDev} alt="Image" /> {/* davor war hier meter1 */}
+                                <img src={webDev} alt="Image" /> 
                                 <h5>Web Development</h5>
                             </div>
                             <div className="item">
@@ -56,8 +56,13 @@ export const Skills = () => {
                                 <h5>C#</h5>
                             </div>
                             <div className="item">
-                                <img src={py} alt="Image" />{/*vorher meter 3*/ }
+                                <img src={py} alt="Image" />
                                 <h5>Python</h5> {/*bild aendern*/}
+                            </div>
+                            <div className="item">
+                                <img src={py} alt="Image" />
+                                <h5>Python: Datascience Grundlagen</h5> 
+                                <p>Pandas • NumPy • Datenanalyse</p>
                             </div>
                             <div className="item">
                                 <img src={java} alt="Image" />
@@ -70,6 +75,11 @@ export const Skills = () => {
                             <div className="item">
                                 <img src={bss} alt="Image" />
                                 <h5>Linux</h5>
+                            </div>
+                             <div className="item">
+                                <img src="https://tse1.mm.bing.net/th/id/OIP.evJyqicYI7-mg6t9MJwOpgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Image" />
+                                <h5>Unity</h5>
+                                <p>Schiffssimulator mit C# und Unity</p>
                             </div>
                         </Carousel>
                     </div>

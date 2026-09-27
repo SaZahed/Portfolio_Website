@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import hkp from "../assets/img/rezied_hkp.png"
 import schiff from "../assets/img/schiff.jpg"
 import oas from "../assets/img/oas.png"
+import eshop from "../assets/img/eshop.png"
 
 import projImg2 from "../assets/img/project-img2.png";
 import sql from "../assets/img/sql_projekt.png"
@@ -28,7 +29,7 @@ export const Projects = () => {
     {
       title: "E-Shop",
       description: "Eine E-Shop Anwendung in Java",
-      imgUrl: projImg1,
+      imgUrl: eshop,
     },
     {
       title: "Reisesystem",
@@ -101,7 +102,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>In meinem Studium habe ich verschiedene Projekte in unterschiedlichen Modulen gemacht.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -116,6 +117,8 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
+                        <p>Hier sind Projekte vom 1-4 Semester</p>
+
                       <Row>
                         {
                           projects.slice(0,6).map((project, index) => {
@@ -130,7 +133,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <p>Im 6 Semster hat man im Rahmen des Modulds Projekt ein großes Projekt mit einem Unternehmen. In unserem Fall war es das Unternehmen OAS, welches sich mit Wägetechnik beschäftigt. Unsere Aufgabe war es eine KI Analyse zu implementieren, die die Parkposition eines LKWs prüft.</p>
                       <Row>
                       {
                           projects.slice(6,8).map((project, index) => {
@@ -145,7 +148,10 @@ export const Projects = () => {
                         </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>VVlt Sachen, die ich im Auslandssemester gelernt habe?</p>
+                      <p>Im 5 Semster erfolgte das Auslandssemester. Für mich ging es in die Steiermark an die FH Joaneeum. Dort habe ich insgesamt 7 Kurse belegt.
+                          Hierbei habe ich verschiedene Themengebiete kennenlernen dürfen von Webentwicklung zu Servern.
+                          Eingeschrieben war ich ind dem Software Design and Cloud Computing Studiengang.
+                      </p>
                        <Row>
                       {
                           projects.slice(8,14).map((project, index) => {
