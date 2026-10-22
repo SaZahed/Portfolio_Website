@@ -5,6 +5,7 @@ import hkp from "../assets/img/rezied_hkp.png"
 import schiff from "../assets/img/schiff.jpg"
 import oas from "../assets/img/oas.png"
 import eshop from "../assets/img/eshop.png"
+import hadoop from "../assets/img/hadoop.png"
 
 import projImg2 from "../assets/img/project-img2.png";
 import sql from "../assets/img/sql_projekt.png"
@@ -63,8 +64,8 @@ export const Projects = () => {
     },
     {
       title: "Big Data",
-      description: "In diesem Kurs haben wir mit Hadoop gearbeitet",
-      imgUrl: projImg1,
+      description: "Big-Data-Verarbeitung mit Apache Hadoop MapReduce, Hive und Spark sowie praktische Projektarbeit.",
+      imgUrl: hadoop,
     },
     {
       title: "Servertechnologie",
