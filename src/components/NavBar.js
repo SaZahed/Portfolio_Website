@@ -7,6 +7,7 @@ import{FaGithub} from "react-icons/fa"
 import logo from"../assets/img/logo.svg";
 import pengweng from"../assets/img/pengweng.jpg";
 import panda from"../assets/img/panda.png"; //selbst ausgewählt
+import character from "../assets/img/animeted_logo.avif"
 
 import navIcon1 from"../assets/img/nav-icon1.svg";
 import navIcon2 from"../assets/img/nav-icon2.svg";
@@ -37,7 +38,9 @@ export const NavBar = () => {
         <Navbar expand="lg" className = {scrolled ? "scrolled": ""}>
             <Container>
                 <Navbar.Brand href="#home">
-                <img src= {panda} alt="Logo"/>
+                <img src= {character} alt="Logo"/>
+                {/* img src= {panda} alt="Logo"/> */}
+
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon" ></span>
