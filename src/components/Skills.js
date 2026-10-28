@@ -16,6 +16,7 @@ import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import angular from "../assets/img/Angular_gradient_logo.png"
 
 export const Skills = () => {
   const responsive = {
@@ -61,7 +62,7 @@ export const Skills = () => {
                             </div>
                             <div className="item">
                                 <img src={py} alt="Image" />
-                                <h5>Python: Datascience Grundlagen</h5> 
+                                <h5>Datascience Grundlagen</h5> 
                                 <p>Pandas • NumPy • Datenanalyse</p>
                             </div>
                             <div className="item">
@@ -79,7 +80,20 @@ export const Skills = () => {
                              <div className="item">
                                 <img src="https://tse1.mm.bing.net/th/id/OIP.evJyqicYI7-mg6t9MJwOpgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Image" />
                                 <h5>Unity</h5>
-                                <p>Schiffssimulator mit C# und Unity</p>
+                                <p>Schiffssimulator Projekt mit C# und Unity</p>
+                            </div>
+                            <div className="item">
+                                <img src={angular} alt="Image"/>
+                                <h5>Angular</h5>                                
+                            </div>
+                            <div className="item">
+                                <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*aFPoPQSaO4DFD7ezZC8WrQ.png"/>
+                                <h5>Apache/Hadoop</h5>
+                                <p>Erste Erfahrungen mit Hadoop, MapReduce, Hive und Spark</p>
+                            </div>
+                            <div className="item">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png?utm_source=de.wikipedia.org&utm_campaign=index&utm_content=thumbnail"/>
+                                <h5>Node.js</h5>
                             </div>
                         </Carousel>
                     </div>
