@@ -6,14 +6,19 @@ import schiff from "../assets/img/schiff.jpg"
 import oas from "../assets/img/oas.png"
 import eshop from "../assets/img/eshop.png"
 import hadoop from "../assets/img/hadoop.png"
+import bc from "../assets/img/bc.png"
+import pqm from "../assets/img/pqm.png"
 
 import projImg2 from "../assets/img/project-img2.png";
 import sql from "../assets/img/sql_projekt.png"
 import ticketshop from "../assets/img/ticketshop.png"
+import apache from "../assets/img/apache.webp"
 
 import projImg3 from "../assets/img/project-img3.png";
 import pythonShop from "../assets/img/pytho_shop.png"
 import mb from "../assets/img/medbox.png"
+import sq from "../assets/img/software_quality.png"
+import cloud from "../assets/img/cloud.png"
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 //import 'animate.css';
@@ -34,17 +39,17 @@ export const Projects = () => {
     },
     {
       title: "Reisesystem",
-      description: "SQL Datenbank",
+      description: "SQL Datenbank für ein Reisesytem",
       imgUrl: sql,
     },
     {
       title: "Python Projekte",
-      description: "Einkaufsanwendung & Model für Filmanalyse",
+      description: "Einkaufsanwendung & Model für Filmadatennalyse",
       imgUrl: pythonShop,
     },
     {
       title: "Schiffssimulator",
-      description: "Schiffssimulator mithilfe von Unity implementiert",
+      description: "Einen Schiffssimulator mithilfe von Unity in C# implementiert",
       imgUrl: schiff,
     },
     {
@@ -54,7 +59,7 @@ export const Projects = () => {
     },
     {
       title: "KI Bildanalyse im industriellen Kontext",
-      description: "Projekt mit OAS; KI für Bildanalyse",
+      description: "Projekt mit dem Unternehmen OAS; KI für die Analyse der Parkposition eines LKW's",
       imgUrl: oas,
     },
     {
@@ -69,28 +74,29 @@ export const Projects = () => {
     },
     {
       title: "Servertechnologie",
-      description: "In diesem Kurs haben wir unseren eigenen Server mit Linux eingerichtet",
-      imgUrl: projImg2,
+      description: "Einrichtung und Konfiguration von Linux-Servern mit DNS, DHCP, Apache und E-Mail-Diensten.",
+      imgUrl: apache,
     },
     {
       title: "Cloudtechonolgie",
-      description: "3 kleine Projekte, um sich mit dem Thema cloudtech vertraut zu machen",
-      imgUrl: projImg3,
+      description: "Cloud Computing, NIST-Modell, Service-Modelle und praktische Übungen mit Cloud-Diensten.",
+      imgUrl: cloud,
     },
     {
-      title: "Serverquality",
-      description: "Wichtige Konzepte erlent, um clean code zu schreiben: 4 praktische Übungen zum Thema: Java, Code Smell, Testing und ?",
-      imgUrl: projImg3,
+      title: "Softwarequality",
+      description: "Grundlagen der Softwarequalität. 4 praktische Übungen zum Thema: Java, Code Smell, Code-Komplexität und Testing",
+      // description: "Wichtige Konzepte erlent, um clean code zu schreiben: 4 praktische Übungen zum Thema: Java, Code Smell, Testing und Cyclomatic Complexity",
+      imgUrl: sq,
     },
     {
-      title: "Prozess und Qualitätsmanagement",
-      description: "6 ECTs für ein Wahlmodul: Möglichkeit an der FH Kurse von anderen Bereichen zu belegen",
-      imgUrl: projImg1,
+      title: "Prozess & Qualitätsmanagement",
+      description: "Wahlmodul: Einführung zum Thema Geschäftsprozesse",
+      imgUrl: pqm,
     },
     {
       title: "Business Communication",
-      description: "6 ECTs für ein Wahlmodul: Möglichkeit an der FH Kurse von anderen Bereichen zu belegen",
-      imgUrl: projImg1,
+      description: "Wahlmodul: Unternehmerisches Denken, Teamentwicklung, nachhaltige Geschäftsmodelle und Scrum.",
+      imgUrl: bc,
     }
   ];
 
@@ -149,8 +155,8 @@ export const Projects = () => {
                         </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Im 5 Semster erfolgte das Auslandssemester. Für mich ging es in die Steiermark an die FH Joaneeum. Dort habe ich insgesamt 7 Kurse belegt.
-                          Hierbei habe ich verschiedene Themengebiete kennenlernen dürfen von Webentwicklung zu Servern.
+                      <p>Im 5 Semster absolvierte ich mein Auslandssemester an der FH Joaneeum in der Steiermark. Dort habe ich insgesamt 7 Kurse belegt.
+                          Hierbei habe ich verschiedene Themengebiete kennenlernen dürfen: von Webentwicklung bis zu Servern.
                           Eingeschrieben war ich ind dem Software Design and Cloud Computing Studiengang.
                       </p>
                        <Row>
