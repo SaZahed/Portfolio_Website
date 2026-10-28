@@ -29,22 +29,22 @@ export const Projects = () => {
   const projects = [
     {
       title: "Hello Kitty backing page",
-      description: "HTML, CSS, Node,js Anwendung",
+      description: "HTML, CSS, Javascript, Node.js Anwendung",
       imgUrl: hkp,
     },
     {
       title: "E-Shop",
-      description: "Eine E-Shop Anwendung in Java",
+      description: "Implementierung einer E-Shop Anwendung in Java",
       imgUrl: eshop,
     },
     {
-      title: "Reisesystem",
-      description: "SQL Datenbank für ein Reisesytem",
+      title: "Datenbanken Projekt",
+      description: "SQL-Datenbank für ein Reisesystem",
       imgUrl: sql,
     },
     {
       title: "Python Projekte",
-      description: "Einkaufsanwendung & Model für Filmadatennalyse",
+      description: "Einkaufsanwendung und Modell zur Filmdatenanalyse",
       imgUrl: pythonShop,
     },
     {
@@ -58,8 +58,8 @@ export const Projects = () => {
       imgUrl: ticketshop,
     },
     {
-      title: "KI Bildanalyse im industriellen Kontext",
-      description: "Projekt mit dem Unternehmen OAS; KI für die Analyse der Parkposition eines LKW's",
+      title: "KI Bildanalyse",
+      description: "Projekt mit dem Unternehmen OAS; KI-gestützte Analyse der Parkposition eines Lkw",
       imgUrl: oas,
     },
     {
@@ -74,17 +74,17 @@ export const Projects = () => {
     },
     {
       title: "Servertechnologie",
-      description: "Einrichtung und Konfiguration von Linux-Servern mit DNS, DHCP, Apache und E-Mail-Diensten.",
+      description: "Einrichtung und Konfiguration von Linux-Servern mit DNS, Apache und E-Mail-Diensten.",
       imgUrl: apache,
     },
     {
-      title: "Cloudtechonolgie",
+      title: "Cloudtechnologie",
       description: "Cloud Computing, NIST-Modell, Service-Modelle und praktische Übungen mit Cloud-Diensten.",
       imgUrl: cloud,
     },
     {
       title: "Softwarequality",
-      description: "Grundlagen der Softwarequalität. 4 praktische Übungen zum Thema: Java, Code Smell, Code-Komplexität und Testing",
+      description: "Softwarequalität, Code Smells, Code-Komplexität und Softwaretesting anhand von vier praktischen Übungen.",
       // description: "Wichtige Konzepte erlent, um clean code zu schreiben: 4 praktische Übungen zum Thema: Java, Code Smell, Testing und Cyclomatic Complexity",
       imgUrl: sq,
     },
@@ -109,7 +109,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>In meinem Studium habe ich verschiedene Projekte in unterschiedlichen Modulen gemacht.</p>
+                <p>Während meines Studiums habe ich an verschiedenen Projekten gearbeitet und Einblicke in unterschiedliche Bereiche der Informatik gewonnen.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -124,7 +124,7 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                        <p>Hier sind Projekte vom 1-4 Semester</p>
+                        <p>Projekte vom 1-4 Semester</p>
 
                       <Row>
                         {
@@ -140,7 +140,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Im 6 Semster hat man im Rahmen des Modulds Projekt ein großes Projekt mit einem Unternehmen. In unserem Fall war es das Unternehmen OAS, welches sich mit Wägetechnik beschäftigt. Unsere Aufgabe war es eine KI Analyse zu implementieren, die die Parkposition eines LKWs prüft.</p>
+                      <p>Im 6 Semester entwickelten wir in einer Gruppe im Rahmen des Projektmoduls gemeinsam mit einem Unternehmen eine praxisorientierte Lösung. Unser Projektpartner war OAS, ein Unternehmen im Bereich Wägetechnik. Ziel war es, mithilfe von KI die Parkposition eines Lkw zu analysieren.</p>
                       <Row>
                       {
                           projects.slice(6,8).map((project, index) => {
@@ -155,10 +155,7 @@ export const Projects = () => {
                         </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Im 5 Semster absolvierte ich mein Auslandssemester an der FH Joaneeum in der Steiermark. Dort habe ich insgesamt 7 Kurse belegt.
-                          Hierbei habe ich verschiedene Themengebiete kennenlernen dürfen: von Webentwicklung bis zu Servern.
-                          Eingeschrieben war ich ind dem Software Design and Cloud Computing Studiengang.
-                      </p>
+                      <p>Im 5 Semster absolvierte ich mein Auslandssemester an der FH Joaneeum in der Steiermark. Im Studiengang Software Design and Cloud Computing belegte ich sieben Kurse und beschäftigte mich mit verschiedenen Themen; von Webentwicklung bis hin zu Servern.</p>
                        <Row>
                       {
                           projects.slice(8,14).map((project, index) => {

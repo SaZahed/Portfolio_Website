@@ -141,7 +141,7 @@ span.navbar-text {
     width: 42px;
     height: 42px;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #dbc1d4;
     border-radius: 50%;
     transform: scale(0);
 	transition: 0.3s ease-in-out;
