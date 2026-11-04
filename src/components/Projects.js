@@ -1,13 +1,14 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import hkp from "../assets/img/rezied_hkp.png"
-import schiff from "../assets/img/schiff.jpg"
 import eshop from "../assets/img/eshop.png"
 import hadoop from "../assets/img/hadoop.png"
 import bc from "../assets/img/bc.png"
 import pqm from "../assets/img/pqm.png"
 
 import lkws from "../assets/img/lkws.png"
+import schiff from "../assets/img/schiff.jpeg"
+
 
 import sql from "../assets/img/sql_projekt.png"
 import ticketshop from "../assets/img/ticketshop.png"
@@ -47,7 +48,7 @@ export const Projects = () => {
     },
     {
       title: "Schiffssimulator",
-      description: "Einen Schiffssimulator mithilfe von Unity in C# implementiert",
+      description: "Implementierung eines Schiffssimulators mit Unity und C#",
       imgUrl: schiff,
     },
     {
@@ -138,7 +139,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Im 6. Semester entwickelten wir als Studentengruppe im Auftrag des Unternehmens OAS, das auf Wägetechnik spezialisiert ist, eine KI-gestützte Lösung zur Analyse der Parkposition von Lkw.</p>
+                      <p>Im 6. Semester entwickelten wir als Studentengruppe im Auftrag des Unternehmens OAS, das auf Wägetechnik spezialisiert ist, eine KI-gestützte Lösung zur Analyse der Parkposition von Lkws.</p>
                       <Row>
                       {
                           projects.slice(6,8).map((project, index) => {
@@ -153,7 +154,7 @@ export const Projects = () => {
                         </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Im 5 Semster absolvierte ich mein Auslandssemester an der FH Joaneeum in der Steiermark. Im Studiengang Software Design and Cloud Computing belegte ich sieben Kurse und beschäftigte mich mit verschiedenen Themen; von Webentwicklung bis hin zu Servern.</p>
+                      <p>Im 5 Semster absolvierte ich mein Auslandssemester an der FH Joaneeum (Kapfenberg) in der Steiermark. Im Studiengang Software Design and Cloud Computing belegte ich sieben Kurse und beschäftigte mich mit verschiedenen Themen; von Webentwicklung bis hin zu Servern.</p>
                        <Row>
                       {
                           projects.slice(8,14).map((project, index) => {

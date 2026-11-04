@@ -47,14 +47,13 @@ export const Banner = () =>{
         <section className = "banner" id="home">
             <Container>
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
+                    <Col xs={12} md={6} xl={8}>
                     <span className= "tagline">Wilkommen zu meinem Portfolio</span>
                     <h1>{"Hallo, ich bin "}<span className="wrap">{text}</span></h1>
                     <p> Ich studiere Informatik und bin neugierig auf die vielfältigen Möglichkeiten, die dieser Bereich bietet. Durch verschiedene Studienprojekte konnte ich bereits praktische Erfahrungen mit
                          Programmiersprachen und modernen Technologien sammeln.</p>
-                    <button onClick={() => console.log("connect")}> Let's connect <ArrowRightCircle size={25} /> </button>
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={6} xl={4}>
                     <img src={headerIMG} alt="Headder img" />
                     
                     </Col>

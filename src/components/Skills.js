@@ -100,7 +100,7 @@ export const Skills = () => {
                             <div className="item">
                                 <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*aFPoPQSaO4DFD7ezZC8WrQ.png"/>
                                 <h5>Apache/Hadoop</h5>
-                                <p>Erste Erfahrungen mit Hadoop, MapReduce, Hive und Spark</p>
+                                <p>Erste Erfahrungen mit Hadoop, MapReduce und Hive</p>
                             </div>
                             <div className="item">
                                 <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png?utm_source=de.wikipedia.org&utm_campaign=index&utm_content=thumbnail"/>
