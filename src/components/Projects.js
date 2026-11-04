@@ -8,6 +8,9 @@ import pqm from "../assets/img/pqm.png"
 
 import lkws from "../assets/img/lkws.png"
 import schiff from "../assets/img/schiff.jpeg"
+import povSchiff from "../assets/img/aufnahme_schiff.png"
+
+
 
 
 import sql from "../assets/img/sql_projekt.png"
@@ -49,7 +52,7 @@ export const Projects = () => {
     {
       title: "Schiffssimulator",
       description: "Implementierung eines Schiffssimulators mit Unity und C#",
-      imgUrl: schiff,
+      imgUrl: povSchiff,
     },
     {
       title: "Ticketshop",
