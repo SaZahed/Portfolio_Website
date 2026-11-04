@@ -1,20 +1,18 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
 import hkp from "../assets/img/rezied_hkp.png"
 import schiff from "../assets/img/schiff.jpg"
-import oas from "../assets/img/oas.png"
 import eshop from "../assets/img/eshop.png"
 import hadoop from "../assets/img/hadoop.png"
 import bc from "../assets/img/bc.png"
 import pqm from "../assets/img/pqm.png"
 
-import projImg2 from "../assets/img/project-img2.png";
+import lkws from "../assets/img/lkws.png"
+
 import sql from "../assets/img/sql_projekt.png"
 import ticketshop from "../assets/img/ticketshop.png"
 import apache from "../assets/img/apache.webp"
 
-import projImg3 from "../assets/img/project-img3.png";
 import pythonShop from "../assets/img/pytho_shop.png"
 import mb from "../assets/img/medbox.png"
 import sq from "../assets/img/software_quality.png"
@@ -60,7 +58,7 @@ export const Projects = () => {
     {
       title: "KI Bildanalyse",
       description: "Projekt mit dem Unternehmen OAS; KI-gestützte Analyse der Parkposition eines Lkw",
-      imgUrl: oas,
+      imgUrl: lkws,
     },
     {
       title: "Medication Reminder System",
@@ -140,7 +138,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Im 6 Semester entwickelten wir in einer Gruppe im Rahmen des Projektmoduls gemeinsam mit einem Unternehmen eine praxisorientierte Lösung. Unser Projektpartner war OAS, ein Unternehmen im Bereich Wägetechnik. Ziel war es, mithilfe von KI die Parkposition eines Lkw zu analysieren.</p>
+                      <p>Im 6. Semester entwickelten wir als Studentengruppe im Auftrag des Unternehmens OAS, das auf Wägetechnik spezialisiert ist, eine KI-gestützte Lösung zur Analyse der Parkposition von Lkw.</p>
                       <Row>
                       {
                           projects.slice(6,8).map((project, index) => {

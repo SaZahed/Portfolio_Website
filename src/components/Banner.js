@@ -6,7 +6,7 @@ import headerIMG from "../assets/img/header-img.svg"
 export const Banner = () =>{
     const [loopNum, setLoopNum] = useState(0); //first word as default
     const [isDeleting,setIsDeleting] = useState(false); 
-    const toRotate = ["Webentwicklerin", "Programmiererin", "Studentin"]; //words to rotate
+    const toRotate = ["Entwicklerin", "Programmiererin", "Studentin"]; //words to rotate
     const [text, setText] = useState(""); // letter for letter
     const period = 2000; //time when each letter is printed --> transition
     const [delta, setDelta] = useState(300 - Math.random() * 100); //how fast each will be printed
@@ -50,7 +50,8 @@ export const Banner = () =>{
                     <Col xs={12} md={6} xl={7}>
                     <span className= "tagline">Wilkommen zu meinem Portfolio</span>
                     <h1>{"Hallo, ich bin "}<span className="wrap">{text}</span></h1>
-                    <p> Durch verschiedene Studienprojekte konnte ich bereits praktische Erfahrungen mit Programmiersprachen und modernen Tools sammeln.</p>
+                    <p> Ich studiere Informatik und bin neugierig auf die vielfältigen Möglichkeiten, die dieser Bereich bietet. Durch verschiedene Studienprojekte konnte ich bereits praktische Erfahrungen mit
+                         Programmiersprachen und modernen Technologien sammeln.</p>
                     <button onClick={() => console.log("connect")}> Let's connect <ArrowRightCircle size={25} /> </button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>

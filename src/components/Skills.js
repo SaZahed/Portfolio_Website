@@ -2,12 +2,18 @@ import meter1 from "../assets/img/meter1.svg";
 import java from "../assets/img/Java.png"
 import webDev from "../assets/img/webDev.avif";
 import py from "../assets/img/py.jpg"
-
+import ds from "../assets/img/ds.jpg"
 import bss from "../assets/img/bss.webp"
 
 import cSharp from "../assets/img/c#.png"
 
-import sql from "../assets/img/sql.avif"
+import postgres from "../assets/img/postgres.svg"
+
+import yolo from "../assets/img/yolo.png"
+import gtm from "../assets/img/gtm.jpg"
+import roboflow from "../assets/img/roboflow.webp"
+import gc from "../assets/img/gc.png"
+
 
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
@@ -46,11 +52,16 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Kentnisse und Technologien:<br></br> Im Studium habe ich bereits mit verschiedenen Programmiersprachen und Technologien gearbeitet. Dabei konnte ich praktische Erfahrungen sammeln und mir Grundlagen in den folgenden Bereichen aneignen.</p>
+                        <p>Kentnisse und Technologien:<br></br> Im Studium habe ich bereits mit verschiedenen Programmiersprachen und Technologien gearbeitet. <br/>Dabei konnte ich praktische Erfahrungen sammeln und mir Grundlagen in den folgenden Bereichen aneignen.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={webDev} alt="Image" /> 
                                 <h5>Web Development</h5>
+                            </div>
+                            <div className="item">
+                                <img src={gtm} alt="Image"/>
+                                <h5>Teachable Machine</h5>       
+                                <p>Training eines Bildklassifikationsmodell</p>                         
                             </div>
                             <div className="item">
                                 <img src={cSharp} alt="Image" />
@@ -61,7 +72,7 @@ export const Skills = () => {
                                 <h5>Python</h5> {/*bild aendern*/}
                             </div>
                             <div className="item">
-                                <img src={py} alt="Image" />
+                                <img src={ds} alt="Image" />
                                 <h5>Datascience Grundlagen</h5> 
                                 <p>Pandas • NumPy • Datenanalyse</p>
                             </div>
@@ -70,8 +81,8 @@ export const Skills = () => {
                                 <h5>Java</h5>
                             </div>
                             <div className="item">
-                                <img src={sql} alt="Image" />
-                                <h5>SQL</h5>
+                                <img src={postgres} alt="Image" />
+                                <h5>PostgreSQL</h5>
                             </div>
                             <div className="item">
                                 <img src={bss} alt="Image" />
@@ -95,6 +106,21 @@ export const Skills = () => {
                                 <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png?utm_source=de.wikipedia.org&utm_campaign=index&utm_content=thumbnail"/>
                                 <h5>Node.js</h5>
                             </div>
+                            <div className="item">
+                                <img src={yolo} alt="Image"/>
+                                <h5>YOLO: Object detection</h5>                                
+                            </div>
+                            <div className="item">
+                                <img src={roboflow} alt="Image"/>
+                                <h5>Roboflow</h5>       
+                                <p>Bildannotation und Vorbereitung von Datensätzen</p>                         
+                            </div>
+                            <div className="item">
+                                <img src={gc} alt="Image"/>
+                                <h5>Google Collab</h5>       
+                                <p>Python Notebook für kollaboratives arbeiten  </p>                         
+                            </div>
+                            
                         </Carousel>
                     </div>
                 </div>

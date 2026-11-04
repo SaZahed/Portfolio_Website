@@ -58,7 +58,6 @@ export const NavBar = () => {
                              target="_blank"
                              rel="noopener noreferrer"
                              aria-label="GitHub-Profil öffnen"
-                             
                             >
                                 <FaGithub></FaGithub>
                             </a>
