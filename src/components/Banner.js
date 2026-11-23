@@ -4,12 +4,11 @@ import {ArrowRightCircle} from "react-bootstrap-icons" //arrow icons aus libary 
 import headerIMG from "../assets/img/header-img.svg"
 
 export const Banner = () =>{
-    //animation bestandteile
-    const [loopNum, setLoopNum] = useState(0); //first word as default: wo im array bin ich?
-    const [isDeleting,setIsDeleting] = useState(false); //schreibe oder loesche ich im moment?
-    const toRotate = ["Web Developer", "Programmer", "Student"]; //words to rotate
-    const [text, setText] = useState(""); // aktuell sichtbarer text
-    const period = 2000; //transition: 2sekunden warten bevor es geloescht wird
+    const [loopNum, setLoopNum] = useState(0); //first word as default
+    const [isDeleting,setIsDeleting] = useState(false); 
+    const toRotate = ["Entwicklerin", "Programmiererin", "Studentin"]; //words to rotate
+    const [text, setText] = useState(""); // letter for letter
+    const period = 2000; //time when each letter is printed --> transition
     const [delta, setDelta] = useState(300 - Math.random() * 100); //how fast each will be printed
 
     useEffect(() =>{
@@ -55,13 +54,13 @@ export const Banner = () =>{
         <section className = "banner" id="home">
             <Container>
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                    <span className= "tagline">Welcome to my Portfolio!</span>
-                    <h1>{"Hi I'm a "}<span className="wrap">{text}</span></h1>
-                    <p> I’m a Computer Science student and started this React project to learn more about React and gain hands-on experience with it</p>
-                    <button onClick={() => console.log("connect")}> Let's connect <ArrowRightCircle size={25} /> </button>
+                    <Col xs={12} md={6} xl={8}>
+                    <span className= "tagline">Wilkommen zu meinem Portfolio</span>
+                    <h1>{"Hallo, ich bin "}<span className="wrap">{text}</span></h1>
+                    <p> Ich studiere Informatik und bin neugierig auf die vielfältigen Möglichkeiten, die dieser Bereich bietet. Durch verschiedene Studienprojekte konnte ich bereits praktische Erfahrungen mit
+                         Programmiersprachen und modernen Technologien sammeln.</p>
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={6} xl={4}>
                     <img src={headerIMG} alt="Headder img" />
                     
                     </Col>

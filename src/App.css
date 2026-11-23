@@ -36,6 +36,13 @@ body {
   background-color: #121212 !important; /*important = Vorrang vor anderen CSS Regeln*/
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
+  /*moechte das bild durchgaegig haben*/
+  background-image: url('./assets/img/banner_cute.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,14 +103,14 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color: #FCE8F0;
 }
 nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: #080808 !important; /*mit neuem Hintergrund eignet sich dunklere Schrift eher*/
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -138,7 +145,7 @@ span.navbar-text {
     width: 42px;
     height: 42px;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #dbc1d4;
     border-radius: 50%;
     transform: scale(0);
 	transition: 0.3s ease-in-out;
@@ -156,7 +163,7 @@ span.navbar-text {
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
+  color: #080808;
   border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
@@ -235,10 +242,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Banner Css ************/
+.banner h1 {
+  color: #3D2732;
+}
+
+.banner p {
+  color: #5A4650;
+}
+
+.banner button {
+  color: #3D2732;
+}
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url('./assets/img/banner_cute.jpg'); /*angepass*/
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -262,7 +280,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  color: #B8B8B8;
+  color: hsl(265, 36%, 31%);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -289,6 +307,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /*Animation definieren*/
 .banner img {
   animation: updown 3s linear infinite;
+  position: relative;
+  left: 20px;
+}
+
+.banner .col-xl-5 {
+    position: relative;
+    left: 0px;
+}
+
+.banner .col-xl-7 {
+    position: relative;
+    z-index: 2;
 }
 /*bounce effect*/
 @keyframes updown {
@@ -303,7 +333,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     }
 }
 .txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+  border-right: 0.08em solid #100f0f;
 }
 
 /************ Skills Css ************/
@@ -312,7 +342,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-bx {
-  background: #151515;
+  background: #cdbebe;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
@@ -323,7 +353,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-weight: 700;
 }
 .skill p {
-    color: #B8B8B8;
+    color: #5A4650;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
@@ -350,15 +380,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  /**background-color: black;*/
+  background-repeat: no-repeat;
+
 }
 .project h2 {
+  color: #5A4650;
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
 }
 .project p {
-  color: #B8B8B8;
+  color: #5A4650;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -380,7 +413,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #fff;
+  color: #0e0e0e;
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -424,7 +457,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+
+  aspect-ratio: 16 / 9;
 }
+
+.proj-imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);

@@ -1,8 +1,27 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard"; //react muster mit cards zu arbeiten: so vermeidet man doppelte HTML codestuecke
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import { ProjectCard } from "./ProjectCard";
+import hkp from "../assets/img/rezied_hkp.png"
+import eshop from "../assets/img/eshop.png"
+import hadoop from "../assets/img/hadoop.png"
+import bc from "../assets/img/bc.png"
+import pqm from "../assets/img/pqm.png"
+
+import lkws from "../assets/img/lkws.png"
+import schiff from "../assets/img/schiff.jpeg"
+import povSchiff from "../assets/img/aufnahme_schiff.png"
+
+
+
+
+import sql from "../assets/img/sql_projekt.png"
+import ticketshop from "../assets/img/ticketshop.png"
+import apache from "../assets/img/apache.webp"
+
+import pythonShop from "../assets/img/pytho_shop.png"
+import mb from "../assets/img/medbox.png"
+import sq from "../assets/img/software_quality.png"
+import cloud from "../assets/img/cloud.png"
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 //import 'animate.css';
 import TrackVisibility from 'react-on-screen'; // neue externe react komponente: element gerade sichtbar oder nicht?
@@ -11,35 +30,76 @@ export const Projects = () => {
   //array mit mehreren Objekten, um Projekte zu visualisieren
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Hello Kitty backing page",
+      description: "HTML, CSS, Javascript, Node.js Anwendung",
+      imgUrl: hkp,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "E-Shop",
+      description: "Implementierung einer E-Shop Anwendung in Java",
+      imgUrl: eshop,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Datenbanken Projekt",
+      description: "SQL-Datenbank für ein Reisesystem",
+      imgUrl: sql,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Python Projekte",
+      description: "Einkaufsanwendung und Modell zur Filmdatenanalyse",
+      imgUrl: pythonShop,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Schiffssimulator",
+      description: "Implementierung eines Schiffssimulators mit Unity und C#",
+      imgUrl: povSchiff,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Ticketshop",
+      description: "Angular Anwendung: Konzertticketshop",
+      imgUrl: ticketshop,
     },
+    {
+      title: "KI Bildanalyse",
+      description: "Projekt mit dem Unternehmen OAS; KI-gestützte Analyse der Parkposition eines Lkw",
+      imgUrl: lkws,
+    },
+    {
+      title: "Medication Reminder System",
+      description: "Mithilfe von einem Arduino ein Erinnerungssystem für die Medikamenteneinnahme implementiert",
+      imgUrl: mb,
+    },
+    {
+      title: "Big Data",
+      description: "Big-Data-Verarbeitung mit Apache Hadoop MapReduce, Hive und Spark sowie praktische Projektarbeit.",
+      imgUrl: hadoop,
+    },
+    {
+      title: "Servertechnologie",
+      description: "Einrichtung und Konfiguration von Linux-Servern mit DNS, Apache und E-Mail-Diensten.",
+      imgUrl: apache,
+    },
+    {
+      title: "Cloudtechnologie",
+      description: "Cloud Computing, NIST-Modell, Service-Modelle und praktische Übungen mit Cloud-Diensten.",
+      imgUrl: cloud,
+    },
+    {
+      title: "Softwarequality",
+      description: "Softwarequalität, Code Smells, Code-Komplexität und Softwaretesting anhand von vier praktischen Übungen.",
+      // description: "Wichtige Konzepte erlent, um clean code zu schreiben: 4 praktische Übungen zum Thema: Java, Code Smell, Testing und Cyclomatic Complexity",
+      imgUrl: sq,
+    },
+    {
+      title: "Prozess & Qualitätsmanagement",
+      description: "Wahlmodul: Einführung zum Thema Geschäftsprozesse",
+      imgUrl: pqm,
+    },
+    {
+      title: "Business Communication",
+      description: "Wahlmodul: Unternehmerisches Denken, Teamentwicklung, nachhaltige Geschäftsmodelle und Scrum.",
+      imgUrl: bc,
+    }
   ];
 
   return (
@@ -51,9 +111,8 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                {/*bauen Tab wobei der erste immer aktiv ist*/}
-                <Tab.Container id="projects-tabs" defaultActiveKey="first"> 
+                <p>Während meines Studiums habe ich an verschiedenen Projekten gearbeitet und Einblicke in unterschiedliche Bereiche der Informatik gewonnen.</p>
+                <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Tab 1</Nav.Link>
@@ -67,9 +126,11 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
+                        <p>Projekte vom 1-4 Semester</p>
+
                       <Row>
                         {
-                          projects.map((project, index) => { //durchlauf der Projekte
+                          projects.slice(0,6).map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -80,11 +141,35 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <p>Im 6. Semester entwickelten wir als Studentengruppe im Auftrag des Unternehmens OAS, das auf Wägetechnik spezialisiert ist, eine KI-gestützte Lösung zur Analyse der Parkposition von Lkws.</p>
+                      <Row>
+                      {
+                          projects.slice(6,8).map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                        </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <p>Im 5 Semster absolvierte ich mein Auslandssemester an der FH Joaneeum (Kapfenberg) in der Steiermark. Im Studiengang Software Design and Cloud Computing belegte ich sieben Kurse und beschäftigte mich mit verschiedenen Themen; von Webentwicklung bis hin zu Servern.</p>
+                       <Row>
+                      {
+                          projects.slice(8,14).map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                        </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

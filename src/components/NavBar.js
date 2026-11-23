@@ -1,11 +1,13 @@
 
 import {useState, useEffect} from "react"; //hooks von react: daten speichern und veraendern
 import {Navbar, Container,Nav} from "react-bootstrap" //nutzen grundgerüst von bootstrap
+import{FaGithub} from "react-icons/fa"
 
 //bilder importe, assets können dann über src einfach eingebunden werden
 import logo from"../assets/img/logo.svg";
 import pengweng from"../assets/img/pengweng.jpg";
 import panda from"../assets/img/panda.png"; //selbst ausgewählt
+import character from "../assets/img/animeted_logo.avif"
 
 import navIcon1 from"../assets/img/nav-icon1.svg";
 import navIcon2 from"../assets/img/nav-icon2.svg";
@@ -37,7 +39,9 @@ export const NavBar = () => {
         <Navbar expand="lg" className = {scrolled ? "scrolled": ""}>
             <Container>
                 <Navbar.Brand href="#home">
-                <img src= {panda} alt="Logo"/>
+                <img src= {character} alt="Logo"/>
+                {/* img src= {panda} alt="Logo"/> */}
+
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"> //Button, der auf kleinen Bildschirmen die Navbar auf- und zuklappt
                     <span className="navbar-toggler-icon" ></span>
@@ -52,11 +56,17 @@ export const NavBar = () => {
                     </Nav>
                     <span className = "navbar-text">
                         <div className = "social-icon">
-                            <a href="#"><img src ={navIcon1} alt=""/></a>
-                            <a href="#"><img src={navIcon2} alt=""/></a>
-                            <a href="#"><img src={navIcon3} alt=""/></a>
+                            <a
+                             href="https://github.com/SaZahed"
+                             target="_blank"
+                             rel="noopener noreferrer"
+                             aria-label="GitHub-Profil öffnen"
+                            >
+                                <FaGithub></FaGithub>
+                            </a>
+                         
                         </div>
-                        <button className="vvd" onClick={() => console.log("connect")}> <span> Let's connect </span> </button>
+                        <button className="vvd" onClick={() => {window.location.href = "mailto:szahed@stud.hs-bremen.de";}}> <span> Let's connect </span> </button>
 
                     </span>
                 </Navbar.Collapse>
