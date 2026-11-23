@@ -14,6 +14,11 @@ import gtm from "../assets/img/gtm.jpg"
 import roboflow from "../assets/img/roboflow.webp"
 import gc from "../assets/img/gc.png"
 
+import swagger from "../assets/img/swagger.png"
+import dotnet from "../assets/img/Net.png"
+
+
+
 
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
@@ -120,7 +125,14 @@ export const Skills = () => {
                                 <h5>Google Collab</h5>       
                                 <p>Python Notebook für kollaboratives arbeiten  </p>                         
                             </div>
-                            
+                            <div className="item">
+                                <img src={swagger} alt="Image"/>
+                                <h5>Swagger</h5>       
+                            </div>
+                            <div className="item">
+                                <img src={dotnet} alt="Image"/>
+                                <h5>.NET10</h5>       
+                            </div>
                         </Carousel>
                     </div>
                 </div>
