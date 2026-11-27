@@ -4,14 +4,9 @@ import {Navbar, Container,Nav} from "react-bootstrap" //nutzen grundgerüst von 
 import{FaGithub} from "react-icons/fa"
 
 //bilder importe, assets können dann über src einfach eingebunden werden
-import logo from"../assets/img/logo.svg";
-import pengweng from"../assets/img/pengweng.jpg";
-import panda from"../assets/img/panda.png"; //selbst ausgewählt
 import character from "../assets/img/animeted_logo.avif"
 
-import navIcon1 from"../assets/img/nav-icon1.svg";
-import navIcon2 from"../assets/img/nav-icon2.svg";
-import navIcon3 from"../assets/img/nav-icon3.svg";
+
 
 //fertiges navbar einbinden: export wichtig damit wir es in App.js nutzen koennen
 export const NavBar = () => {

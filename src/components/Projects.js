@@ -7,7 +7,6 @@ import bc from "../assets/img/bc.png"
 import pqm from "../assets/img/pqm.png"
 
 import lkws from "../assets/img/lkws.png"
-import schiff from "../assets/img/schiff.jpeg"
 import povSchiff from "../assets/img/aufnahme_schiff.png"
 
 
